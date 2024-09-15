@@ -1,0 +1,11 @@
+<template>
+    <template if:true={errors}>
+        <p>{errors}</p>
+    </template>
+    <lightning-card title="Contact List using @wire Apex Method">
+        <template if:true={contacts.data}>
+            <lightning-datatable key-field="Id" data={contacts.data} columns={conColumuns}>
+           </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>
